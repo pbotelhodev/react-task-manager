@@ -11,9 +11,10 @@ Um simples, porém funcional, gerenciador de tarefas (To-Do List) construído co
 
 ## 📸 Preview
 
-![Preview do Task Manager]![c9876038-ebff-4875-a8cc-aad1c8429ed6](https://github.com/user-attachments/assets/9ac7aef6-327a-46ed-ada9-501d70bfc772)
+![Preview do Task Manager]<img width="1867" height="917" alt="image" src="https://github.com/user-attachments/assets/787aa176-fb7b-41cc-b6c6-f106fc7c9a76" />
+(https://github.com/user-attachments/assets/9ac7aef6-327a-46ed-ada9-501d70bfc772)
 
-*(**Dica:** Para obter a URL da imagem, a forma mais fácil é editar o `README` diretamente no site do GitHub e arrastar e soltar seu print na área de texto. O GitHub fará o upload e criará o link para você.)*
+
 
 ---
 
