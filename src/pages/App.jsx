@@ -10,36 +10,50 @@ function App() {
   }, []);
 
   //Banco de dados inicial
-  const [tarefas, setTarefas] = useState([
-    { id: v4(), text: "Estudar React", description: "Estudar React na plataforma Gemini", isCompleted: false, isInfoVisible: false },
-    { id: v4(), text: "Estudar JavaScript", description: "Estudar JavaScript na plataforma Gemini", isCompleted: false, isInfoVisible: false },
-    { id: v4(), text: "Estudar HTML e CSS", description: "Estudar HTML e CSS na plataforma Gemini", isCompleted: false, isInfoVisible: false },
-  ]);
 
+  const [task, setTask] = useState(
+    JSON.parse(localStorage.getItem("Task")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("Task", JSON.stringify(task));
+  }, [task]);
   //Funcões
 
   //Incluir nova tarefa
   function onAddTaskList(title, description) {
     const newTask = {
       id: v4(),
+      isCompleted: false,
       text: title,
       description: description,
-      isCompleted: false,
-      isInfoVisible: false,
+      
     };
 
-    setTarefas((tasks) => [...tasks, newTask]);
+    setTask((tasks) => [...tasks, newTask]);
   }
 
-  //Mais informações
-
   //Marcar tarefa como concluída
-  
+  function onCheckTask(id) {
+    const newTask = task.map((task) => {
+      if (task.id === id) {
+        if (task.isCompleted === true) {
+          return { ...task, isCompleted: false };
+        } else{
+          return { ...task, isCompleted: true};
+        }
+      }
+      return task;
+    });
+    setTask(newTask);
+    console.log(task.isCompleted);
+  }
+
   //Deletar tarefa
-
-
-
-  
+  function onDeleteTask(id) {
+    const newTask = task.filter((task) => task.id !== id);
+    setTask(newTask);
+  }
 
   return (
     <>
@@ -47,8 +61,9 @@ function App() {
         <header>
           <h1>Task Manager</h1>
         </header>
-        <InputTasks onAddTaskList={onAddTaskList}/>
-        <Listas dbase={tarefas}/>
+        <InputTasks onAddTaskList={onAddTaskList} />
+        <Listas dbase={task} onDeleteTask={onDeleteTask} onCheckTask={onCheckTask}/>
+        
       </div>
     </>
   );
