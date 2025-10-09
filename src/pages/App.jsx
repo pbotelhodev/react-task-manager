@@ -10,18 +10,7 @@ function App() {
   }, []);
 
   //Banco de dados inicial
-  const [tarefas, setTarefas] = useState([
-    {
-      id: 1,
-      text: "Estudar React",
-      description: "Ler a documentação oficial e fazer exercícios.",
-    },
-    {
-      id: 2,
-      text: "Fazer compras",
-      description: "Comprar frutas, legumes e pão.",
-    },
-  ]);
+  const [tarefas, setTarefas] = useState([]);
 
   //Funcões
 
@@ -42,7 +31,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div id="app" className="container">
         <header>
           <h1>Task Manager</h1>
         </header>
