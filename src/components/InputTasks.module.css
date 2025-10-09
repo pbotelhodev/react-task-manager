@@ -1,0 +1,14 @@
+.formTask{
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  padding: 0 15px;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #333;
+  min-width: 500px;
+  max-width: 900px;
+  display: flex;
+  
+}
+
