@@ -7,9 +7,10 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   color: #333;
   min-width: 500px;
-  max-width: 900px;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 /* Nova classe para o título */
@@ -30,7 +31,7 @@
 .button {
   border: none;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 14px 9px 15px;
   text-align: center;
   align-items: center;
   text-decoration: none;
@@ -48,4 +49,21 @@
 .buttonTrash {
   background-color: #fd1a1a;
 
+}
+
+.mainRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  margin: 10px 0;
+  color: #333333;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: justify;
+  font-weight: 500;
 }

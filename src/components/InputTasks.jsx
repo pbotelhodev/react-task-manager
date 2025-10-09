@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 import styles from "./InputTasks.module.css";
 
-function InputTasks({onAddTaskList}) {
+function InputTasks(props) {
   const { register, handleSubmit, reset} = useForm();
+
 
   const onSubmit = (data) => {
     console.log("Dados do form: ", data);
     const title = data.titleTask;
     const description = data.descriptionTask;
-    onAddTaskList(title, description);
+    props.onAddTaskList(title, description);
     reset();
   };
 
@@ -27,6 +28,7 @@ function InputTasks({onAddTaskList}) {
         placeholder="Insira a descrição da sua task"
         {...register("descriptionTask", { required: "A descrição é obrigatória" })}
       />
+      
       <button type="submit">Adicionar task</button>
     </form>
   );
