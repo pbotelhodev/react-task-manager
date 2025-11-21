@@ -6,10 +6,6 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-![Preview do App](https://via.placeholder.com/1000x500?text=Coloque+aqui+o+Print+do+Task+Manager)
-
----
-
 ## 💻 Sobre o Projeto
 
 O **Task Manager** é uma aplicação web desenvolvida para demonstrar o domínio sobre o ciclo de vida do React e manipulação de estado complexo.
